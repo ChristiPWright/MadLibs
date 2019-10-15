@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import FormInputs from './formInputs.js'
 
 class App extends Component {
   constructor(props){
@@ -51,61 +51,16 @@ class App extends Component {
     return (
       <div className="App">
         <div className="Form">
-          <input 
-            placeholder="type a noun"
-            type="text"
-            name="noun"
-            value={this.state.form.noun}
-            onChange = {this.inputChange}
-          />
-          <input
-            placeholder="type a plural noun"
-            type="text"
-            name="pluralNoun1"
-            value={this.state.form.pluralNoun1}
-            onChange = {this.inputChange}
-          />
-          <input
-            placeholder="type a verb"
-            type="text"
-            name="verb1"
-            value={this.state.form.verb1}
-            onChange = {this.inputChange}
-          />
-          <input
-            placeholder="type a verb"
-            type="text"
-            name="verb2"
-            value={this.state.form.verb2}
-            onChange = {this.inputChange}
-          />
-          <input
-            placeholder="type a part of the body"
-            type="text"
-            name="partOfBody"
-            value={this.state.form.partOfBody}
-            onChange = {this.inputChange}
-          />
-          <input
-            placeholder="type a adjective"
-            type="text"
-            name="adjective1"
-            value={this.state.form.adjective1}
-            onChange = {this.inputChange}
-          />
-          <input
-            placeholder="type a plural noun"
-            type="text"
-            name="pluralNoun2"
-            value={this.state.form.pluralNoun2}
-            onChange = {this.inputChange}
-          />
-          <input
-            placeholder="type a adjective"
-            type="text"
-            name="adjective2"
-            value={this.state.form.adjective2}
-            onChange = {this.inputChange}
+          < FormInputs 
+              form={this.inputChange} 
+              formNoun={this.state.form.noun}
+              pluralNoun1={this.state.form.pluralNoun1}
+              verb1={this.state.form.verb1}
+              verb2={this.state.form.verb2}
+              partOfBody={this.state.form.partOfBody}
+              adjective1={this.state.form.adjective1}
+              adjective2={this.state.form.adjective2}
+              pluralNoun2={this.state.form.pluralNoun2}
           />
         </div>
         <button onClick={this.madLibReturn}>
